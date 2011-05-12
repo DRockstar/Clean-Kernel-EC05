@@ -14,7 +14,10 @@ flash()
 {
 chmod 755 $bmlwrite > /dev/null 2>&1
 $bmlwrite $1 $2
+sleep 3
 toolbox reboot
+busybox reboot
+reboot now
 }
 
 usage()
@@ -47,4 +50,5 @@ bml8)
 flash $1 /dev/block/bml8;;
 *) usage
 esac
+
 
