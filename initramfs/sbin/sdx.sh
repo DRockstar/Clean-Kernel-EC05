@@ -53,7 +53,7 @@ rm -rf /sbin/su
 # fix busybox DNS while system is read-write
 if [ ! -f "/system/etc/resolv.conf" ]; then
   echo "nameserver 8.8.8.8" >> /system/etc/resolv.conf
-  echo "nameserver 8.8.8.4" >> /system/etc/resolv.conf
+  echo "nameserver 8.8.4.4" >> /system/etc/resolv.conf
 fi
 
 # setup proper passwd and group files for 3rd party root access
