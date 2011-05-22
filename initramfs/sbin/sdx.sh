@@ -9,6 +9,7 @@
 /sbin/busybox2 rm -rf /sbin/busybox
 /sbin/busybox2 mv /sbin/busybox2 /sbin/busybox
 /sbin/busybox --install -s /bin
+rm -rf /bin/ls
 rm -rf /system/xbin/busybox
 ln -s /sbin/busybox /system/xbin/busybox
 rm -rf /sbin/recovery
