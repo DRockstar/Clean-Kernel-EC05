@@ -7,10 +7,21 @@ If you do not have the toolchain then get it from codesourcery.com and install/e
 
 http://www.codesourcery.com/public/gnu_toolchain/arm-none-linux-gnueabi/arm-2009q3-67-arm-none-linux-gnueabi-i686-pc-linux-gnu.tar.bz2
 
-Browse to Kernel/arch/arm/configs/ and edit victory_03_defconfig and change the path for CONFIG_INITRAMFS_SOURCE=
+Browse to Kernel/arch/arm/configs/ and edit Clean.Kernel_defconfig and change the path for CONFIG_INITRAMFS_SOURCE=
 to the absolute path of the initramfs.
 
 Then refer to the README.txt on what else you need to change.
+
+Changes and Features as of v1.04:
+
+* ClockworkMod 3.0.2.5 Reboot Recovery, compatible with RFS and ext4
+* fixed busybox DNS, thanks Rodderik!
+* Added scripts for USB Mass Storage, mountums & umountums
+* Voodoo Sound Driver v8 update, from supercurio
+* RNDIS / wired USB tethering support built in from kernel
+* THUMBEE built in from kernel for cortex a8 optimization, thanks Rodderik!
+* build_kernel.sh modified to reflect EpicCM/nullghost script, but with some special revisions.
+
 
 Features as of version 1.02:
 
