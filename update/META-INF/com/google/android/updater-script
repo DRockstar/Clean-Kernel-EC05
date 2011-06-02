@@ -1,6 +1,6 @@
 ui_print("");ui_print("");ui_print("");ui_print("");
 ui_print("================================================");
-ui_print("DRockstar Clean Kernel EC05 v1.04");
+ui_print("DRockstar Clean Kernel EC05 v1.05");
 ui_print("Rooted Dual FS Kernel for the Epic 4G");
 # ui_print("Voodoo Color Edition");
 ui_print("================================================");
