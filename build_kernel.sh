@@ -12,6 +12,7 @@ PRODUCE_ZIP=y
 TARGET="Clean.Kernel"
 THREADS=$(expr 1 + $(grep processor /proc/cpuinfo | wc -l))
 VERSION=$(date '+%Y-%m-%d-%H.%M.%S')
+TVER=$TARGET.EC05.v1.05.tar
 PROJECT_NAME=SPH-D700
 HW_BOARD_REV="03"
 TARGET_LOCALE="vzw"
@@ -105,8 +106,10 @@ done
 popd
 
 if [ "$PRODUCE_TAR" = y ] ; then
-	echo "Generating $TARGET-$VERSION.tar for flashing with Odin" && echo ""
-	tar c -C $KERNEL_BUILD_DIR/arch/arm/boot zImage >"$TARGET-$VERSION.tar"
+	echo "Generating $TVER.md5 for flashing with Odin" && echo ""
+	tar -H ustar -c -C $KERNEL_BUILD_DIR/arch/arm/boot zImage >"$TVER"
+	md5sum -t $TVER >> $TVER
+	mv $TVER $TVER.md5
 fi
 
 if [ "$PRODUCE_ZIP" = y ] ; then
