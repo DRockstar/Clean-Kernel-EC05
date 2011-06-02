@@ -14,7 +14,8 @@ Then refer to the README.txt on what else you need to change.
 
 Changes in v1.05:
 
-* Switched to ClockworkMod 3.1.0.1, with USB Mass Storage, and improved key mappings
+* Switched to ClockworkMod 3.1.0.1, with USB Mass Storage, and improved key mappings, with customized cwm tweaks for the Epic4G community
+* busybox 1.18.0 replaced by full cm busybox 1.16.2 provided by cwm recovery binary, with --install -s feature enabled
 * updated to Voodoo Sound v9 by supercurio
 
 Changes and Features as of v1.04:
