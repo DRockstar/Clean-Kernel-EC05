@@ -6,14 +6,10 @@
 
 # Install busybox
 /sbin/busybox mkdir /bin
-/sbin/busybox2 rm -rf /sbin/busybox
-/sbin/busybox2 mv /sbin/busybox2 /sbin/busybox
 /sbin/busybox --install -s /bin
-rm -rf /bin/ls
 rm -rf /system/xbin/busybox
 ln -s /sbin/busybox /system/xbin/busybox
-rm -rf /sbin/recovery
-rm -rf /res/sbin
+rm -rf /res
 sync
 
 # Fix permissions in /sbin, just in case
@@ -77,9 +73,9 @@ rm /sbin/Superuser.apk
 . > /system/bin/profile
 chmod 644 /system/bin/profile
 
-# keyboard patch sysfs call 7 for snappy keyboard performance
+# keyboard patch sysfs call 5 for snappy keyboard performance
 if [ ! -f "/data/local/timer_delay" ]; then
-  echo 7 > /data/local/timer_delay
+  echo 5 > /data/local/timer_delay
 fi
 cat /data/local/timer_delay > /sys/devices/platform/s3c-keypad/timer_delay
 
